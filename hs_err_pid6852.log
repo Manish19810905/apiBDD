@@ -1,0 +1,253 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 201326592 bytes for Failed to commit area from 0x0000000740000000 to 0x000000074c000000 of length 201326592.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3284), pid=6852, tid=18140
+#
+# JRE version:  (11.0.14+1) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.14.0.1+1-LTS-3, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dmaven.home=EMBEDDED -Dclassworlds.conf=\\ispedcw030d.inf.fedex.com\vdi_oz_u3\4193783\Desktop\GQ_UI Automation Project\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf849791771065541929.tmp -Dmaven.multiModuleProjectDirectory=\\ISPEDCW030D.INF.FEDEX.COM\vdi_oz_u3\4193783\Desktop\GQ_UI Automation Project\gq_ui_testautomation -Dfile.encoding=Cp1252 org.codehaus.plexus.classworlds.launcher.Launcher -B -gs \\ispedcw030d.inf.fedex.com\vdi_oz_u3\4193783\Documents\Maven\new_set.xml -s \\ispedcw030d.inf.fedex.com\vdi_oz_u3\4193783\Documents\Maven\new_set.xml test
+
+Host: Intel(R) Xeon(R) Gold 5120 CPU @ 2.20GHz, 2 cores, 11G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+Time: Mon Mar 14 18:04:31 2022 India Standard Time elapsed time: 0.122740 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ce2e3da800):  JavaThread "Unknown thread" [_thread_in_vm, id=18140, stack(0x0000006952800000,0x0000006952900000)]
+
+Stack: [0x0000006952800000,0x0000006952900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6296da]
+V  [jvm.dll+0x76323f]
+V  [jvm.dll+0x7648e9]
+V  [jvm.dll+0x764f73]
+V  [jvm.dll+0x23d7c8]
+V  [jvm.dll+0x626a5a]
+V  [jvm.dll+0x61b7f5]
+V  [jvm.dll+0x2f262c]
+V  [jvm.dll+0x2f24b2]
+V  [jvm.dll+0x2f71d6]
+V  [jvm.dll+0x339bdf]
+V  [jvm.dll+0x339610]
+V  [jvm.dll+0x2cfc48]
+V  [jvm.dll+0x2d0db6]
+V  [jvm.dll+0x73d857]
+V  [jvm.dll+0x73f0ef]
+V  [jvm.dll+0x346909]
+V  [jvm.dll+0x723160]
+V  [jvm.dll+0x3b551f]
+V  [jvm.dll+0x3b7631]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001ce2c95b190, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001ce2e3f0000 GCTaskThread "GC Thread#0" [stack: 0x0000006952900000,0x0000006952a00000] [id=15832]
+  0x000001ce2e43e000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006952a00000,0x0000006952b00000] [id=18916]
+  0x000001ce2e440800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000006952b00000,0x0000006952c00000] [id=1816]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff8be0eed7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001ce2e3d40b0] Heap_lock - owner thread: 0x000001ce2e3da800
+
+Heap address: 0x0000000740000000, size: 3072 MB, Compressed Oops mode: Non-zero based: 0x0000000740000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7d90b0000 - 0x00007ff7d90bf000 	C:\Program Files\Java\jdk11\bin\javaw.exe
+0x00007fffd1410000 - 0x00007fffd1605000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffd0890000 - 0x00007fffd094e000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffceff0000 - 0x00007fffcf2b8000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffced40000 - 0x00007fffcee40000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff91a70000 - 0x00007fff91a88000 	C:\Program Files\Java\jdk11\bin\jli.dll
+0x00007fffa0d40000 - 0x00007fffa0d55000 	C:\Program Files\Java\jdk11\bin\VCRUNTIME140.dll
+0x00007fffd07d0000 - 0x00007fffd087c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffd01f0000 - 0x00007fffd028e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffcf580000 - 0x00007fffcf61b000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffcf450000 - 0x00007fffcf57a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffd05c0000 - 0x00007fffd0761000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffcc910000 - 0x00007fffccbaa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007fffcf390000 - 0x00007fffcf3b2000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffd0290000 - 0x00007fffd02bb000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffcec30000 - 0x00007fffced3d000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffce700000 - 0x00007fffce70a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffcf2c0000 - 0x00007fffcf35d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffd0df0000 - 0x00007fffd0e20000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fffce930000 - 0x00007fffce968000 	C:\Program Files\Citrix\System32\MfApHook64.dll
+0x00007fffce850000 - 0x00007fffce862000 	C:\Program Files\Citrix\IcaService\FullScreenHook64.dll
+0x00007fff7f540000 - 0x00007fff7f5db000 	C:\Program Files\Java\jdk11\bin\MSVCP140.dll
+0x00007fffce370000 - 0x00007fffce39a000 	C:\Program Files\Citrix\ICAService\ShellHook64.dll
+0x00007fffd03a0000 - 0x00007fffd03f5000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007fffce260000 - 0x00007fffce36f000 	C:\Program Files\Citrix\IcaService\SCardHook64.dll
+0x00007fffce0b0000 - 0x00007fffce0d0000 	C:\Program Files\Citrix\ICAService\cxinjime64.dll
+0x00007fffce080000 - 0x00007fffce0a6000 	C:\Program Files\Citrix\ICAService\PicaWtsHook64.dll
+0x00007fffa3b50000 - 0x00007fffa3bf4000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPApi.dll
+0x00007fffcebd0000 - 0x00007fffcec30000 	C:\WINDOWS\System32\WINTRUST.dll
+0x00007fffcee40000 - 0x00007fffcef96000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007fffcdec0000 - 0x00007fffcded2000 	C:\WINDOWS\SYSTEM32\MSASN1.dll
+0x00000000547a0000 - 0x00000000547ac000 	C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips\EpMPThe.dll
+0x00007fff8bb30000 - 0x00007fff8c646000 	C:\Program Files\Java\jdk11\bin\server\jvm.dll
+0x00007fffd0330000 - 0x00007fffd0338000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fffbe270000 - 0x00007fffbe279000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffd02c0000 - 0x00007fffd032b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffc7590000 - 0x00007fffc75b7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffcce40000 - 0x00007fffcce52000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffa21f0000 - 0x00007fffa2200000 	C:\Program Files\Java\jdk11\bin\verify.dll
+0x00007fffcbd10000 - 0x00007fffcbef4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffc5a10000 - 0x00007fffc5a3c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffcf3c0000 - 0x00007fffcf442000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff91240000 - 0x00007fff91268000 	C:\Program Files\Java\jdk11\bin\java.dll
+0x00007fffa1e10000 - 0x00007fffa1e1a000 	C:\Program Files\Java\jdk11\bin\jimage.dll
+0x00007fff90bc0000 - 0x00007fff90bd6000 	C:\Program Files\Java\jdk11\bin\zip.dll
+0x00000000543a0000 - 0x0000000054401000 	C:\WINDOWS\SYSTEM32\vmGuestLib.DLL
+0x00007fffc0c00000 - 0x00007fffc0c0a000 	C:\WINDOWS\system32\vsocklib.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk11\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Citrix\System32;C:\Program Files\Citrix\IcaService;C:\Program Files\McAfee\Endpoint Security\Threat Prevention\Ips;C:\Program Files\Java\jdk11\bin\server
+
+VM Arguments:
+jvm_args: -Dmaven.home=EMBEDDED -Dclassworlds.conf=\\ispedcw030d.inf.fedex.com\vdi_oz_u3\4193783\Desktop\GQ_UI Automation Project\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf849791771065541929.tmp -Dmaven.multiModuleProjectDirectory=\\ISPEDCW030D.INF.FEDEX.COM\vdi_oz_u3\4193783\Desktop\GQ_UI Automation Project\gq_ui_testautomation -Dfile.encoding=Cp1252 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -B -gs \\ispedcw030d.inf.fedex.com\vdi_oz_u3\4193783\Documents\Maven\new_set.xml -s \\ispedcw030d.inf.fedex.com\vdi_oz_u3\4193783\Documents\Maven\new_set.xml test
+java_class_path (initial): C:\Progs\Eclipse\eclipse-jee-2021-09\plugins\org.eclipse.m2e.maven.runtime_1.18.1.20211011-2139\jars\plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 201326592                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3221225472                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5825164                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916538                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916538                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk8
+JRE_HOME=C:\Program Files\Java\jre8
+PATH=C:/Program Files/Java/jdk11/bin/server;C:/Program Files/Java/jdk11/bin;C:\Program Files\Java\jdk8\bin;C:\Program Files (x86)\Common Files\Citrix\System32;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Oracle\Oracle12c\product\12.2.0\client_1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;c:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;c:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Progs\gradle\gradle-7.3.3\bin;C:\Program Files\Git\cmd;C:\Program Files\Cloud Foundry;C:\Progs\nodeJs\node-v14.15.4-win-x64;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Salesforce CLI\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Citrix\Virtual Desktop Agent\;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Python39\Scripts\;C:\Program Files\Python39\;C:\Program Files\SASHome\x86\Secure\ccme4;C:\Program Files\SASHome\Secure\ccme4;C:\Program Files\PuTTY\;C:\Program Files\Python37\Scripts\;C:\Program Files\Python37\;C:\Program Files (x86)\tools\;C:\Progs\apache-ant-1.8.4\bin;C:\Progs\apache-maven-3.5.4\bin;C:\Program Files (x86)\Micro Focus\Unified Functional Testing\bin;C:\Program Files\Microsoft\Azure Functions Core Tools\;C:\Progs\AndroidStudioSDK\tools;C:\Progs\AndroidStudioSDK\tools\bin;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Fiddler;c:\progs\kubectl;c:\progs\helm;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\CA\AllFusion Gen\Gen\;C:\Program Files (x86)\CA\AllFusion Gen\;C:\Program Files (x86)\seagull\BlueZone 6.1;C:\Program Files\nodejs\;C:\Program Files\PostgreSQL
+USERNAME=4193783
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 85 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+VMWare virtualization detected
+vSphere host information:
+host.cpu.processorMHz = 2194
+host.cpu.coresPerPkg = 14
+
+vSphere resource information collected at VM startup:
+vm.cpu.reserved = 0
+vm.cpu.limit = -1
+vm.cpu.used = 8777672692
+vm.cpu.contention.cpu = 685293986
+vm.cpu.contention.mem = 0
+vm.numa.local = 12064768
+vm.numa.remote = 509952
+guest.mem.reserved = 0
+guest.mem.limit = -1
+guest.mem.mapped = 12574720
+guest.mem.consumed = 12574720
+guest.mem.swapped = 0
+guest.mem.ballooned = 0
+guest.mem.swapIn = 0
+guest.mem.swapOut = 0
+ovhd.mem.swapped = 0
+ovhd.mem.swapIn = 0
+ovhd.mem.swapOut = 0
+
+vSphere resource information available now:
+vm.cpu.reserved = 0
+vm.cpu.limit = -1
+vm.cpu.used = 8778523585
+vm.cpu.contention.cpu = 685344353
+vm.cpu.contention.mem = 0
+vm.numa.local = 12064768
+vm.numa.remote = 509952
+guest.mem.reserved = 0
+guest.mem.limit = -1
+guest.mem.mapped = 12574720
+guest.mem.consumed = 12574720
+guest.mem.swapped = 0
+guest.mem.ballooned = 0
+guest.mem.swapIn = 0
+guest.mem.swapOut = 0
+ovhd.mem.swapped = 0
+ovhd.mem.swapIn = 0
+ovhd.mem.swapOut = 0
+
+
+CPU:total 2 (initial active 2) (1 cores per cpu, 1 threads per core) family 6 model 85 stepping 4 microcode 0x2006906, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 12287M (859M free)
+TotalPageFile size 13311M (AvailPageFile size 106M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 49M, peak: 241M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.14.0.1+1-LTS-3) for windows-amd64 JRE (11.0.14.0.1+1-LTS-3), built on Dec 22 2021 16:19:16 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
